@@ -60,19 +60,9 @@ sudo apt install openssh-server ansible python3-pip -y
 
 ### Setting up the rest with Ansible
 
-Now that you have a working installation of Ansible it is time to download the ansible playbook from this repo and use it to install everything else:
+Now that you have a working installation of Ansible it is time to download the ansible playbook from this repo and use it to install everything else. Provide your own Linux username and password that has sudo permissions:
 
 ```bash
-wget script
-run script, provide username and pass
+wget https://raw.githubusercontent.com/epiecs/devasc-vm-setup/master/setupdevasc.yaml
+ansible-playbook setupdevasc.yaml
 ```
-
-
-
-TODO
-
-- add user to docker user group
-- add user to sudo
-- create devasc user and add to docker and sudo group
-  - vscode repo + check for ansible cli install
-- global install python modules
